@@ -1,6 +1,6 @@
 import unittest
 
-from lentils.application import main
+from application import main
 
 
 def test_sample_single_word():
