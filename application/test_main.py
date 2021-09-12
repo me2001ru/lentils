@@ -17,3 +17,9 @@ def session():
     db_session = connection.cursor()
     yield db_session
     connection.close()
+
+
+def test_project(cursor):
+    cursor.execute('SELECT id FROM project_steps')
+    rs = cursor.fetchall()
+    assert len(rs) == 0
