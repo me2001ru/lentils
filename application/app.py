@@ -20,7 +20,7 @@ def get_post(post_id):
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your secret key'
+app.config['SECRET_KEY'] = 'my secret key'
 
 
 @app.route('/')
