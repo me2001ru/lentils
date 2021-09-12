@@ -19,12 +19,6 @@ def session():
     connection.close()
 
 
-def test_project(conn):
-    cursor = conn.execute('SELECT id FROM project_steps')
-    rs = cursor.fetchall()
-    assert len(rs) == 0
-
-
 @pytest.fixture
 def cursor(conn):
     cursor = conn.cursor()
