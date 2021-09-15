@@ -49,5 +49,5 @@ jobs:
       - name: build & run package
         run: |
           export FLASK_APP=app.py
-          python application/app
+          flask run
       
