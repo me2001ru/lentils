@@ -49,5 +49,6 @@ jobs:
       - run: pip install -r requirements.txt
       - name: send over package & run it
         run: |
+          python /home/ubuntu/actions-runner/python-apppp/lentils/lentils/init_db.py
           python /home/ubuntu/actions-runner/python-apppp/lentils/lentils/application/app.py
       
