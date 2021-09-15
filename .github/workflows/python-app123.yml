@@ -50,5 +50,5 @@ jobs:
       - name: build & run package
         run: |
           export FLASK_APP=app.py
-          python /home/ubuntu/actions-runner/python-apppp/lentils/lentils/application/app.py
+          python /lentils/application/app.py
       
