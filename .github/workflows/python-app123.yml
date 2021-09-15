@@ -36,7 +36,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install flake8 pytest
           pip install flask
-          pip install waitress
+          pip install 
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Lint with flake8
         run: |
@@ -48,8 +48,7 @@ jobs:
         run: pytest
         
       - run: pip install -r requirements.txt
-      - name: build & run package
+      - name: send over package & run it
         run: |
-          export FLASK_APP=app.py
-          flask run
+          python /home/ubuntu/actions-runner/python-apppp/lentils/lentils/application/app.py
       
