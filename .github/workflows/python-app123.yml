@@ -43,32 +43,5 @@ jobs:
       - name: Run tests
         run: pytest
         
-        # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          sudo apt-get update
-          sudo apt-get install apache2 -y
-          sudo ufw allow 'Apache'
-          sudo systemctl start apache2
-          sudo systemctl enable apache2
-          sudo apt-get install libapache2-mod-wsgi python-dev -y
           
-          # setup dirs & get into rigth area where to place flask application
-          cd /var/www/
-          sudo mkdir webApp
-          cd webApp
-          sudo mkdir webApp
-          sudo apt-get install python-pip -y
-          pip install flask
-          pip install flask_sqlalchemy
-          
-      - uses: actions/checkout@master
-      - name: copy file via ssh password
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          source: "tests/a.txt,tests/b.txt"
-          target: "test"
+
