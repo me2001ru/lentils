@@ -21,6 +21,8 @@ jobs:
       # For example, pypy2 and pypy3
       matrix:
         python-version: [3.7]
+        os: [ubuntu-latest]
+      fail-fast: false
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -45,7 +47,7 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Run tests
         run: pytest
-        
+
       - run: pip install -r requirements.txt
       - name: send over package & run it
         run: |
