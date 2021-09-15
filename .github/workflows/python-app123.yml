@@ -49,7 +49,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo apt-get update
-          sudo apt-get install apapche2 -y
+          sudo apt-get install apache2 -y
           sudo ufw allow 'Apache'
           sudo systemctl start apache2
           sudo systemctl enable apache2
